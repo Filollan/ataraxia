@@ -15,7 +15,7 @@ export default function AudioScreen() {
   const [title, setTitle] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const [duration, setDuration] = useState(0);
-  const [timerInterval, setTimerInterval] = useState<NodeJS.Timeout | null>(null);
+  const [timerInterval, setTimerInterval] = useState<ReturnType<typeof setInterval> | null>(null);
 
   const startRecording = () => {
     setIsRecording(true);

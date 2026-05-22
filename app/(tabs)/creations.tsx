@@ -29,7 +29,7 @@ export default function CreationsScreen() {
   const [audioProgress, setAudioProgress] = useState(0);
   const [showFabMenu, setShowFabMenu] = useState(false);
   const fabAnim = useRef(new Animated.Value(0)).current;
-  const audioTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const audioTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const { journals, audios, drawings, deleteJournal, deleteAudio, deleteDrawing } =
     useCreationsStore();
@@ -83,7 +83,7 @@ export default function CreationsScreen() {
       setAudioProgress(0);
       const totalSteps = Math.max(durationMs / 100, 1);
       let step = 0;
-  const audioTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+      audioTimerRef.current = setInterval(() => {
         step++;
         const progress = Math.min(step / totalSteps, 1);
         setAudioProgress(progress);

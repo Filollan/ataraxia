@@ -25,6 +25,16 @@ const MAPPING = {
   'lock.fill': 'lock',
   'lock.open.fill': 'lock-open',
   'plus.circle.fill': 'add-circle',
+  'play.fill': 'play-arrow',
+  'pause.fill': 'pause',
+  'stop.fill': 'stop',
+  'arrow.uturn.backward': 'undo',
+  'trash.fill': 'delete',
+  'plus': 'add',
+  'xmark': 'close',
+  'pencil.tip': 'edit',
+  'chevron.down': 'expand-more',
+  'chevron.up': 'expand-less',
 } as IconMapping;
 
 /**

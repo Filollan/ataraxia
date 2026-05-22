@@ -381,7 +381,7 @@ export default function HomeScreen() {
 
               {/* Drawing Tool */}
               <TouchableOpacity
-                onPress={() => router.push("/creations")}
+                onPress={() => router.push("/dibujo")}
                 style={[
                   styles.toolCard,
                   {
